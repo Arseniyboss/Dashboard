@@ -1,0 +1,17 @@
+.sidebar-container {
+  float: left;
+  width: 200px;
+  height: 100vh;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-links {
+  list-style-type: none;
+}
+
+@media screen and (max-width: 600px) {
+  .sidebar-container {
+    display: none;
+  }
+}

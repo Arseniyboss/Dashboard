@@ -1,0 +1,27 @@
+.gallery-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 280px);
+  gap: 20px;
+  max-height: 90vh;
+  overflow-y: scroll;
+  padding-bottom: 0.8rem;
+}
+
+@media screen and (max-width: 1430px) {
+  .gallery-container {
+    grid-template-columns: repeat(3, 280px);
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  .gallery-container {
+    grid-template-columns: repeat(2, 280px);
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .gallery-container {
+    grid-template-columns: none;
+  }
+}
