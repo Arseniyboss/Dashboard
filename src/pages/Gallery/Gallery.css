@@ -3,9 +3,17 @@
   justify-content: center;
   grid-template-columns: repeat(auto-fill, 280px);
   gap: 20px;
-  max-height: 90vh;
+  max-height: 100vh;
+  padding: 1.5rem 0;
   overflow-y: scroll;
-  padding-bottom: 0.8rem;
+}
+
+img {
+  --size: 280px;
+  width: var(--size);
+  height: var(--size);
+  box-shadow: var(--box-shadow);
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 1430px) {
@@ -23,5 +31,27 @@
 @media screen and (max-width: 830px) {
   .gallery-container {
     grid-template-columns: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .gallery-container {
+    max-height: initial;
+    overflow-y: initial;
+  }
+  img {
+    --size: 400px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  img {
+    --size: 300px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  img {
+    --size: 250px;
   }
 }

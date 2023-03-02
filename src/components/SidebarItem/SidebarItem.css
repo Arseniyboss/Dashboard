@@ -1,3 +1,9 @@
 .sidebar-item {
   margin-bottom: 2rem;
 }
+
+@media screen and (max-width: 600px) {
+  .sidebar-item {
+    text-align: center;
+  }
+}

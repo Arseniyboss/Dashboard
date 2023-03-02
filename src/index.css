@@ -4,8 +4,9 @@
   padding: 0;
 }
 
-html {
+:root {
   --primary-color: coral;
+  --box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 body {
@@ -26,29 +27,4 @@ h1 {
   text-align: center;
   font-size: 26px;
   padding: 1.2rem 0;
-}
-
-img {
-  --size: 280px;
-  width: var(--size);
-  height: var(--size);
-  border-radius: 10px;
-}
-
-@media screen and (max-width: 600px) {
-  img {
-    --size: 400px;
-  }
-}
-
-@media screen and (max-width: 460px) {
-  img {
-    --size: 300px;
-  }
-}
-
-@media screen and (max-width: 350px) {
-  img {
-    --size: 250px;
-  }
 }

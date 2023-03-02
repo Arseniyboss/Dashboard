@@ -1,17 +1,31 @@
 import './Sidebar.css'
 import SidebarItem from '../SidebarItem/SidebarItem'
 
-const Sidebar = () => {
+const Sidebar = ({ click, closeMobileSidebar }) => {
   return (
-    <nav className='sidebar-container'>
+    <nav className={click ? 'mobile-sidebar' : 'sidebar-container'}>
       <ul className='sidebar-links'>
-        <SidebarItem to='/'>Dashboard</SidebarItem>
-        <SidebarItem to='/courses'>Kurse</SidebarItem>
-        <SidebarItem to='/todos'>Todos</SidebarItem>
-        <SidebarItem to='/news'>News</SidebarItem>
-        <SidebarItem to='/calendar'>Kalender</SidebarItem>
-        <SidebarItem to='/gallery'>Galerie</SidebarItem>
-        <SidebarItem to='/users'>Kontakte</SidebarItem>
+        <SidebarItem to='/' closeMobileSidebar={closeMobileSidebar}>
+          Dashboard
+        </SidebarItem>
+        <SidebarItem to='/courses' closeMobileSidebar={closeMobileSidebar}>
+          Kurse
+        </SidebarItem>
+        <SidebarItem to='/todos' closeMobileSidebar={closeMobileSidebar}>
+          Todos
+        </SidebarItem>
+        <SidebarItem to='/news' closeMobileSidebar={closeMobileSidebar}>
+          News
+        </SidebarItem>
+        <SidebarItem to='/calendar' closeMobileSidebar={closeMobileSidebar}>
+          Kalender
+        </SidebarItem>
+        <SidebarItem to='/gallery' closeMobileSidebar={closeMobileSidebar}>
+          Galerie
+        </SidebarItem>
+        <SidebarItem to='/users' closeMobileSidebar={closeMobileSidebar}>
+          Kontakte
+        </SidebarItem>
       </ul>
     </nav>
   )

@@ -1,0 +1,20 @@
+header {
+  display: none;
+}
+
+.icon-container {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    box-shadow: var(--box-shadow);
+    background: white;
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    padding: 1rem;
+  }
+}

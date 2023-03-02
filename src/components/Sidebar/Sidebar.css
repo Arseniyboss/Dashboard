@@ -3,7 +3,19 @@
   width: 200px;
   height: 100vh;
   padding: 1.5rem;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: var(--box-shadow);
+}
+
+.mobile-sidebar {
+  background: white;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 1rem;
 }
 
 .sidebar-links {
