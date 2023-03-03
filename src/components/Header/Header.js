@@ -4,21 +4,32 @@ import { FaBars, FaTimes } from 'react-icons/fa'
 import Sidebar from '../Sidebar/Sidebar'
 
 const Header = () => {
-  const [click, setClick] = useState(false)
+  const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false)
 
-  const handleClick = () => {
-    setClick(!click)
+  const toggleMobileSidebar = () => {
+    setIsMobileSidebarOpen(!isMobileSidebarOpen)
   }
 
   const closeMobileSidebar = () => {
-    setClick(false)
+    setIsMobileSidebarOpen(false)
   }
   return (
     <header>
-      <div className='icon-container' onClick={handleClick}>
-        {click ? <FaTimes /> : <FaBars />}
+      <div className='icon-container' onClick={toggleMobileSidebar}>
+        {isMobileSidebarOpen ? (
+          <button aria-label='close sidebar' className='accessible-button'>
+            <FaTimes />
+          </button>
+        ) : (
+          <button className='accessible-button'>
+            <FaBars aria-label='open sidebar' />
+          </button>
+        )}
       </div>
-      <Sidebar click={click} closeMobileSidebar={closeMobileSidebar} />
+      <Sidebar
+        isMobileSidebarOpen={isMobileSidebarOpen}
+        closeMobileSidebar={closeMobileSidebar}
+      />
     </header>
   )
 }

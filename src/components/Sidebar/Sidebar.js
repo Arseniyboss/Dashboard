@@ -1,9 +1,11 @@
 import './Sidebar.css'
 import SidebarItem from '../SidebarItem/SidebarItem'
 
-const Sidebar = ({ click, closeMobileSidebar }) => {
+const Sidebar = ({ isMobileSidebarOpen, closeMobileSidebar }) => {
   return (
-    <nav className={click ? 'mobile-sidebar' : 'sidebar-container'}>
+    <nav
+      className={isMobileSidebarOpen ? 'mobile-sidebar' : 'sidebar-container'}
+    >
       <ul className='sidebar-links'>
         <SidebarItem to='/' closeMobileSidebar={closeMobileSidebar}>
           Dashboard
