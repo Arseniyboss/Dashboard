@@ -7,6 +7,7 @@
 :root {
   --primary-color: coral;
   --box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  --border-radius: 10px;
 }
 
 body {
@@ -22,9 +23,27 @@ a.active {
   color: var(--primary-color);
 }
 
+li {
+  list-style-type: none;
+}
+
 h1 {
   color: var(--primary-color);
   text-align: center;
   font-size: 26px;
-  padding: 1.2rem 0;
+  /* margin: 1.2rem 0; */
+  padding: 1rem 0;
+}
+
+article {
+  /* max-height: calc(100vh - 62px); */
+  /* max-height: 92.3vh; */
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+
+@media screen and (max-width: 600px) {
+  article {
+    max-height: initial;
+  }
 }

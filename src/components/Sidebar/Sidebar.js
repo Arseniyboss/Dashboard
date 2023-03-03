@@ -6,7 +6,7 @@ const Sidebar = ({ isMobileSidebarOpen, closeMobileSidebar }) => {
     <nav
       className={isMobileSidebarOpen ? 'mobile-sidebar' : 'sidebar-container'}
     >
-      <ul className='sidebar-links'>
+      <ul>
         <SidebarItem to='/' closeMobileSidebar={closeMobileSidebar}>
           Dashboard
         </SidebarItem>

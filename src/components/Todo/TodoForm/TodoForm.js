@@ -1,7 +1,13 @@
 const TodoForm = () => {
   return (
     <form>
-      <input type='text' placeholder='Enter todo here' />
+      <input
+        type='text'
+        name='add-todo-input'
+        placeholder='Enter todo here'
+        aria-label='add todo input'
+        aria-required='true'
+      />
       <button>Add Todo</button>
     </form>
   )

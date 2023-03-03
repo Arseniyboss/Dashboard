@@ -14,20 +14,22 @@ import NotFound from './pages/NotFound/NotFound'
 const App = () => {
   return (
     <Router>
-      <Sidebar />
-      <Header />
-      <main>
-        <Routes>
-          <Route path='/' element={<Dashboard />} />
-          <Route path='/courses' element={<Courses />} />
-          <Route path='/todos' element={<Todos />} />
-          <Route path='/news' element={<News />} />
-          <Route path='/calendar' element={<Calendar />} />
-          <Route path='/gallery' element={<Gallery />} />
-          <Route path='/users' element={<Users />} />
-          <Route path='*' element={<NotFound />} />
-        </Routes>
-      </main>
+      <div className='container'>
+        <Sidebar />
+        <Header />
+        <main>
+          <Routes>
+            <Route path='/' element={<Dashboard />} />
+            <Route path='/courses' element={<Courses />} />
+            <Route path='/todos' element={<Todos />} />
+            <Route path='/news' element={<News />} />
+            <Route path='/calendar' element={<Calendar />} />
+            <Route path='/gallery' element={<Gallery />} />
+            <Route path='/users' element={<Users />} />
+            <Route path='*' element={<NotFound />} />
+          </Routes>
+        </main>
+      </div>
     </Router>
   )
 }

@@ -3,19 +3,13 @@
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
-  max-height: 100vh;
-  overflow-y: scroll;
+  /* padding: 0 1rem; */
+  /* padding-bottom: 1rem; */
 }
 
-img {
+.gallery-image {
   flex-grow: 1;
   width: 250px;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
-}
-
-@media screen and (max-width: 600px) {
-  .gallery-container {
-    max-height: initial;
-  }
 }

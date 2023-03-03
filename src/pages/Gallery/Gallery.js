@@ -9,7 +9,12 @@ const Gallery = () => {
       {/* <h1>Galerie</h1> */}
       <article className='gallery-container'>
         {images.map((image, index) => (
-          <img key={index} src={image.src} alt={image.alt} />
+          <img
+            key={index}
+            src={image.src}
+            alt={image.alt}
+            className='gallery-image'
+          />
         ))}
       </article>
     </>

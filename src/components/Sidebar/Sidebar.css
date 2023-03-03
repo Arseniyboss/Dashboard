@@ -1,5 +1,4 @@
 .sidebar-container {
-  float: left;
   width: 200px;
   height: 100vh;
   padding: 1.5rem;
@@ -16,10 +15,6 @@
   width: 100vw;
   height: 100vh;
   padding-top: 1rem;
-}
-
-.sidebar-links {
-  list-style-type: none;
 }
 
 @media screen and (max-width: 600px) {
