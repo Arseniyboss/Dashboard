@@ -15,8 +15,8 @@ const App = () => {
   return (
     <Router>
       <div className='container'>
-        <Sidebar />
         <Header />
+        <Sidebar />
         <main>
           <Routes>
             <Route path='/' element={<Dashboard />} />

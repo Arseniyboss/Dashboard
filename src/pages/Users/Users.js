@@ -5,7 +5,6 @@ const Users = () => {
   return (
     <>
       <Meta title='Kontakte' />
-      <h1>Kontakte</h1>
       <article>
         <input type='text' placeholder='Kontakte Suchen' />
         <table>

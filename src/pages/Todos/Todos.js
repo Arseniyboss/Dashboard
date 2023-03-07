@@ -7,7 +7,6 @@ const Todos = () => {
   return (
     <>
       <Meta title='Todos' />
-      <h1>Todos</h1>
       <article>
         <TodoForm />
         <TodoItem title='Sport treiben' />

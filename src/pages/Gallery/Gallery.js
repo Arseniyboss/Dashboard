@@ -6,7 +6,6 @@ const Gallery = () => {
   return (
     <>
       <Meta title='Galerie' />
-      {/* <h1>Galerie</h1> */}
       <article className='gallery-container'>
         {images.map((image, index) => (
           <img
