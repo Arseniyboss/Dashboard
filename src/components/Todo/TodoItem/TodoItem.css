@@ -1,0 +1,42 @@
+.todo {
+  position: relative;
+  width: 80%;
+  padding: 1rem;
+  margin: 1rem auto;
+  margin-top: 0;
+  border-radius: 5px;
+}
+
+.edit-todo-input {
+  font-size: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.todo-title-container {
+  display: flex;
+  width: 70%;
+}
+
+.todo-title {
+  width: inherit;
+  word-wrap: break-word;
+  margin-left: 1rem;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: var(--icon-size);
+}
+
+.check {
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  font-size: var(--icon-size);
+}
