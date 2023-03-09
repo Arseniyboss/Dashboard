@@ -1,33 +1,51 @@
 import './Users.css'
+import { useState, useMemo } from 'react'
 import Meta from '../../components/Meta'
+import users from '../../data/users'
 
 const Users = () => {
+  const [name, setName] = useState('')
+
+  const filteredUsers = useMemo(() => {
+    return users.filter((user) => {
+      return user.name.toLowerCase().startsWith(name.toLowerCase().trim())
+    })
+  }, [name])
   return (
     <>
       <Meta title='Kontakte' />
-      <article>
-        <input type='text' placeholder='Kontakte Suchen' />
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Rolle</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>John Doe</td>
-              <td>johndoe@gmail.com</td>
-              <td>Student</td>
-            </tr>
-            <tr>
-              <td>Jane Doe</td>
-              <td>janedoe@gmail.com</td>
-              <td>Lektorin</td>
-            </tr>
-          </tbody>
-        </table>
+      <article className='table-container'>
+        <input
+          type='text'
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          name='search-input'
+          placeholder='Kontakte Suchen'
+          aria-label='search input'
+          className='search-input'
+        />
+        {filteredUsers.length === 0 ? (
+          <p>No users matched your search criteria</p>
+        ) : (
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              {filteredUsers.map((user) => (
+                <tr key={user.id}>
+                  <td>{user.name}</td>
+                  <td>{user.email}</td>
+                  <td>{user.role}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
       </article>
     </>
   )

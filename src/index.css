@@ -9,6 +9,7 @@
   --box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   --border-radius: 10px;
   --icon-size: 18px;
+  --image-size: 280px;
 }
 
 body {
@@ -26,6 +27,18 @@ a.active {
 
 li {
   list-style-type: none;
+}
+
+input {
+  outline: none;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+}
+
+input:focus {
+  border: 1px solid #444;
 }
 
 article {

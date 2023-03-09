@@ -4,19 +4,6 @@
   margin: 2rem 0;
 }
 
-.add-todo-input {
-  outline: none;
-  border: 1px solid #ddd;
-  border-radius: 20px;
-  font-size: 1rem;
-  padding: 0.6rem 1rem;
-  margin-right: 1rem;
-}
-
-.add-todo-input:focus {
-  border: 1px solid #444;
-}
-
 .add-todo-button {
   outline: none;
   border: none;
@@ -24,6 +11,7 @@
   background: var(--primary-color);
   color: white;
   padding: 0.6rem 1rem;
+  margin-left: 1rem;
   font-size: 1rem;
   cursor: pointer;
 }

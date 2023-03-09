@@ -1,0 +1,54 @@
+.search-input {
+  width: 250px;
+  margin: 2rem 0;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+table {
+  display: block;
+  border-collapse: collapse;
+  width: fit-content;
+  max-width: 80%;
+  max-height: 468px;
+  overflow: scroll;
+}
+
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: lightgrey;
+}
+
+th {
+  text-transform: uppercase;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+td,
+th {
+  text-align: left;
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+}
+
+@media screen and (max-width: 320px) {
+  .search-input {
+    width: 200px;
+  }
+}
+
+/* remove scroll bars caused by giving a padding for td */
+@media screen and (max-width: 600px) {
+  table {
+    max-width: 80vw;
+  }
+}
