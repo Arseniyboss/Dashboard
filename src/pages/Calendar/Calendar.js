@@ -13,7 +13,7 @@ const Calendar = () => {
   return (
     <>
       <Meta title='Calendar' />
-      <article className='calendar-container'>
+      <article className='center-container'>
         <div className='calendar'>
           <section className='calendar-header'>
             <FaArrowLeft

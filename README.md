@@ -9,9 +9,7 @@
 
 ### Pages
 
-- Calendar
 - Dashboard
-- Not Found
 
 ### Data Fetching
 

@@ -1,0 +1,47 @@
+.error-container {
+  flex-direction: column;
+}
+
+.error-image {
+  width: 500px;
+}
+
+.error-text {
+  text-transform: uppercase;
+  margin: 1.5rem 0;
+}
+
+.home-button {
+  background: #7a8bff;
+  color: var(--secondary-color);
+  outline: none;
+  border-radius: 5px;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  transition: 0.2s background-color linear;
+}
+
+.home-button:hover {
+  background: #7a6bff;
+}
+
+@media screen and (max-width: 800px) {
+  .error-image {
+    width: 330px;
+  }
+}
+
+@media screen and (min-width: 801px) and (max-height: 500px) {
+  .error-image {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .error-text {
+    font-size: 1.2rem;
+  }
+  .home-button {
+    font-size: 1rem;
+  }
+}

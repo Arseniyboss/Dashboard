@@ -5,19 +5,12 @@
 }
 
 .add-todo-button {
-  outline: none;
-  border: none;
-  border-radius: 20px;
   background: var(--primary-color);
   color: var(--secondary-color);
+  border-radius: 20px;
   padding: 0.6rem 1rem;
   margin-left: 1rem;
   font-size: 1rem;
-  cursor: pointer;
-}
-
-.add-todo-button:hover {
-  background: #d86c44;
 }
 
 @media screen and (max-width: 380px) {
