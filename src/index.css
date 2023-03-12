@@ -5,7 +5,8 @@
 }
 
 :root {
-  --primary-color: coral;
+  --primary-color: #ff623f;
+  --secondary-color: white;
   --box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   --border-radius: 10px;
   --icon-size: 18px;
@@ -29,7 +30,7 @@ li {
   list-style-type: none;
 }
 
-input {
+input:not(.edit-todo-input) {
   outline: none;
   border: 1px solid #ddd;
   border-radius: 20px;
@@ -37,7 +38,7 @@ input {
   padding: 0.6rem 1rem;
 }
 
-input:focus {
+input:not(.edit-todo-input):focus {
   border: 1px solid #444;
 }
 
@@ -53,7 +54,7 @@ article {
 .data-item {
   display: flex;
   justify-content: space-between;
-  color: white;
+  color: var(--secondary-color);
   background: var(--primary-color);
   border-radius: var(--border-radius);
   padding: 1.5rem;

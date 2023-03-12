@@ -11,7 +11,7 @@ const Sidebar = ({ isMobileSidebarOpen, closeMobileSidebar }) => {
           Dashboard
         </SidebarItem>
         <SidebarItem to='/courses' closeMobileSidebar={closeMobileSidebar}>
-          Kurse
+          Courses
         </SidebarItem>
         <SidebarItem to='/todos' closeMobileSidebar={closeMobileSidebar}>
           Todos
@@ -20,13 +20,13 @@ const Sidebar = ({ isMobileSidebarOpen, closeMobileSidebar }) => {
           News
         </SidebarItem>
         <SidebarItem to='/calendar' closeMobileSidebar={closeMobileSidebar}>
-          Kalender
+          Calender
         </SidebarItem>
         <SidebarItem to='/gallery' closeMobileSidebar={closeMobileSidebar}>
-          Galerie
+          Gallery
         </SidebarItem>
         <SidebarItem to='/users' closeMobileSidebar={closeMobileSidebar}>
-          Kontakte
+          Users
         </SidebarItem>
       </ul>
     </nav>

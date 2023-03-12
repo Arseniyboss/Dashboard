@@ -5,7 +5,7 @@ import courses from '../../data/courses'
 const Courses = () => {
   return (
     <>
-      <Meta title='Kurse' />
+      <Meta title='Courses' />
       <article>
         {courses.map((courses, index) => (
           <section key={index} className='data-list'>

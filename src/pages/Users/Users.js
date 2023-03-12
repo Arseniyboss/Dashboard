@@ -13,14 +13,14 @@ const Users = () => {
   }, [name])
   return (
     <>
-      <Meta title='Kontakte' />
+      <Meta title='Users' />
       <article className='table-container'>
         <input
-          type='text'
+          type='search'
           value={name}
           onChange={(e) => setName(e.target.value)}
           name='search-input'
-          placeholder='Kontakte Suchen'
+          placeholder='Search users'
           aria-label='search input'
           className='search-input'
         />

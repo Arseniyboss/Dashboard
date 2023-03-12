@@ -6,9 +6,8 @@ import { MdModeEdit } from 'react-icons/md'
 
 const TodoItem = ({ title, id, checked }) => {
   const [isEditing, setIsEditing] = useState(false)
-  const [value, setValue] = useState(title)
 
-  const inputRef = useRef()
+  const inputRef = useRef(title)
 
   const { deleteTodo, editTodo } = useTodoContext()
 
@@ -19,14 +18,15 @@ const TodoItem = ({ title, id, checked }) => {
   }, [isEditing])
 
   const handleEdit = (e) => {
+    const title = inputRef.current.value
     e.preventDefault()
     setIsEditing(false)
-    if (!value) return
-    editTodo({ title: value.trim(), id, checked })
+    if (!title) return
+    editTodo({ title: title.trim(), id, checked })
   }
 
   const toggleChecked = () => {
-    editTodo({ title: value.trim(), id, checked: !checked })
+    editTodo({ title, id, checked: !checked })
   }
   return (
     <section className='data-item todo'>
@@ -35,8 +35,7 @@ const TodoItem = ({ title, id, checked }) => {
           <input
             type='text'
             ref={inputRef}
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
+            defaultValue={inputRef.current}
             name='edit-todo-input'
             aria-label='edit todo input'
             className='edit-todo-input'

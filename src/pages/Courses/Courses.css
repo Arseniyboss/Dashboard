@@ -1,5 +1,5 @@
 .course-date {
-  color: white;
+  color: var(--secondary-color);
   background: darkgrey;
   text-align: center;
   width: 150px;
